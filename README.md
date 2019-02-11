@@ -1,6 +1,8 @@
 # Red Hot Sweet Pepper
 Show case demo for 2D Navigation Click-To-Move top down game with NavMeshAgents
 
+Contain 2 scenes, one for square tile and one for hexes.
+
 # Info
 Using: https://github.com/h8man/NavMeshPlus
 Discuss: https://forum.unity.com/threads/2d-navmesh-pathfinding.503596/
