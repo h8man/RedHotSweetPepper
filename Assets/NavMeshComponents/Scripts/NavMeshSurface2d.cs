@@ -432,8 +432,8 @@ namespace UnityEngine.AI
                         var src = new NavMeshBuildSource();
                         src.transform = Matrix4x4.TRS(tilemap.GetCellCenterWorld(vec3int), rot, size);
                         src.shape = NavMeshBuildSourceShape.Mesh;
-                        src.area = area;
                         src.sourceObject = m_UseMeshPrefab.GetComponent<MeshFilter>().sharedMesh;
+                        src.area = area;
                         sources.Add(src);
                     }
                     else
