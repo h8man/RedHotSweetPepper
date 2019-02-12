@@ -14,7 +14,7 @@ In repo you will find implementation of NavMeshSurface2d for tilemap top down ga
 To use it in your project:
 
 1. Copy repo into your Asset folder 
-2. Create Empty Object in scene root and rotated respectively to Tilemap (x90;y0;z0)
+2. Create Empty Object in scene root and rotated respectively to Tilemap (x-90;y0;z0)
 3. Add NavMeshSurface2d component to Empty Object
 4. Tilemap with TilemapCollider2d will be carved out as Unwalkable, unless overriden by NavMeshModifier 
 5. In NavMeshSurface2d select Collection Object to Grid, Default Area to Unwalkable.
