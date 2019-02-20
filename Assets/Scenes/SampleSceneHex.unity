@@ -3570,6 +3570,7 @@ GameObject:
   - component: {fileID: 277714240}
   - component: {fileID: 277714239}
   - component: {fileID: 277714241}
+  - component: {fileID: 277714244}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -4015,8 +4016,24 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
+--- !u!114 &277714244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277714237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,8 +4939,8 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -2, y: -4, z: 0}
-  m_Size: {x: 7, y: 6, z: 1}
+  m_Origin: {x: -5, y: -4, z: 0}
+  m_Size: {x: 10, y: 6, z: 1}
   m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5482,7 +5499,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.120000005
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6b71eaf6b0afcd348bf89c027bc0aae3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 100d7065dee26154c96ef46791763d21, type: 2}
 --- !u!4 &2122262945
 Transform:
   m_ObjectHideFlags: 0
