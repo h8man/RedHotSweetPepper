@@ -5398,8 +5398,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_UseGeometry: 0
+  m_OverrideByGrid: 0
   m_UseMeshPrefab: {fileID: 0}
-  m_DefaultArea: 1
+  m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0

@@ -5045,6 +5045,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b520aec677f48fd49aa4325d68e12c3e, type: 3}
+--- !u!1 &1043334736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4481366442962823943, guid: b520aec677f48fd49aa4325d68e12c3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1043334735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1086191391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,9 +5495,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_UseGeometry: 0
-  m_UseMeshPrefab: {fileID: 4481366442962823943, guid: b520aec677f48fd49aa4325d68e12c3e,
-    type: 3}
-  m_DefaultArea: 1
+  m_OverrideByGrid: 1
+  m_UseMeshPrefab: {fileID: 1043334736}
+  m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
   m_OverrideTileSize: 0
