@@ -48,12 +48,13 @@ namespace UnityEngine.AI
                 {
                     continue;
                 }
-
-                Debug.Log($"Walkable Bounds [{tilemap.name}]: {tilemap.localBounds}");
-                var box = BoxBoundSource(NavMeshSurface2d.GetWorldBounds(tilemap.transform.localToWorldMatrix, tilemap.localBounds));
-                box.area = defaultArea;
-                sources.Add(box);
-
+                if(defaultArea != 1) //if it is walkable
+                {
+                    Debug.Log($"Walkable Bounds [{tilemap.name}]: {tilemap.localBounds}");
+                    var box = BoxBoundSource(NavMeshSurface2d.GetWorldBounds(tilemap.transform.localToWorldMatrix, tilemap.localBounds));
+                    box.area = defaultArea;
+                    sources.Add(box);
+                }
                 int area = defaultArea;
                 var modifier = tilemap.GetComponent<NavMeshModifier>();
                 if (modifier != null && modifier.overrideArea)
@@ -104,7 +105,7 @@ namespace UnityEngine.AI
                     if (!builder.overrideByGrid && tilemap.GetColliderType(vec3int) == Tile.ColliderType.Sprite)
                     {
                         mesh = builder.GetMesh(tilemap.GetSprite(vec3int));
-                        src.transform = tilemap.GetTransformMatrix(vec3int) * Matrix4x4.Translate(tilemap.GetCellCenterWorld(vec3int));
+                        src.transform = Matrix4x4.Translate(tilemap.GetCellCenterWorld(vec3int)) * tilemap.GetTransformMatrix(vec3int);
                         src.sourceObject = mesh;
                         sources.Add(src);
                     }

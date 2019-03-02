@@ -16,7 +16,14 @@ public class Continue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            SceneManager.LoadScene(0);
+            var scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            var scene = SceneManager.GetActiveScene();
+            var indx = (scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+            SceneManager.LoadScene(indx);
         }
     }
 }

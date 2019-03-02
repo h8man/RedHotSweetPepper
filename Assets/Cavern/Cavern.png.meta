@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0eacdbf67ad5a144ba93d7e6082f66a2
+guid: a75449e9e8546574cb08a89c74c9c5e7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: hexPalette_0
-    21300002: hexPalette_1
-    21300004: hexPalette_2
+    21300000: Cavern_0
+    21300002: Cavern_1
+    21300004: Cavern_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -34,12 +34,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -48,9 +48,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,7 +66,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +77,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -87,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hexPalette_0
+      name: Cavern_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,19 +101,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 532d4dbbe6274e545976e270463cc0f6
+      spriteID: 62ef81e56b3ff4746bec549ff9fc8a50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hexPalette_1
+      name: Cavern_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 32
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 105548fa177380b42b9f8efe3f3f0ea3
+      spriteID: 0394b563269da0847bbcf8d502ca7332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hexPalette_2
+      name: Cavern_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 64
         y: 0
-        width: 100
-        height: 100
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,21 +141,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a72bfed72f93e04dbe92408712cc6cf
+      spriteID: 655ad8ea88cb18a4a883e6c0d37a80f5
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 0, y: 50}
-      - {x: -129.90382, y: 24.999998}
-      - {x: -129.90381, y: -25.000004}
-      - {x: 0.000013113417, y: -50}
-      - {x: 129.90382, y: -24.999996}
-      - {x: 129.90382, y: 24.999996}
+    outline: []
     physicsShape: []
     bones: []
-    spriteID: 1452c9309fae1124dbb9897278b7d9bb
+    spriteID: 4ba89aa7e8b1af744b0432608b65c844
     vertices: []
     indices: 
     edges: []
