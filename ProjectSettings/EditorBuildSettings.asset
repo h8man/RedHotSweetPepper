@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleSceneDiagonals.unity
     guid: 07898cb16d4a65b48b1db8785e889cce
+  - enabled: 1
+    path: Assets/Scenes/SampleSceneIsometric.unity
+    guid: c85b50703ba4bed4ab7dce890ad33433
   m_configObjects: {}
