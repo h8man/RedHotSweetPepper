@@ -171,7 +171,6 @@ GameObject:
   - component: {fileID: 5476447741177372041}
   - component: {fileID: 5476447741177372043}
   - component: {fileID: 5476447741177372042}
-  - component: {fileID: 5476447741177372044}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -238,18 +237,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &5476447741177372044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5476447741177372040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9adcb815f3d4a4f9e11554d80ec673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5476447741198435247
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +421,7 @@ GameObject:
   - component: {fileID: 5476447741911522799}
   - component: {fileID: 5476447741911522798}
   - component: {fileID: 5476447741911522797}
+  - component: {fileID: 4653238683073050000}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -500,6 +488,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4653238683073050000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5476447741911522796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9adcb815f3d4a4f9e11554d80ec673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5476447742442727537
 GameObject:
   m_ObjectHideFlags: 0
