@@ -35,5 +35,6 @@ public class Chase : MonoBehaviour
             score.SendMessage("Stop", true);
         }
         agent.SetDestination(target.transform.position);
+        Navigate.DebugDrawPath(agent.path.corners);
     }
 }

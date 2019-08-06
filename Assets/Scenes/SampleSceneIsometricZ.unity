@@ -7687,7 +7687,7 @@ MonoBehaviour:
   m_OverrideByGrid: 0
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
-  m_OverrideVector: {x: 1, y: 1, z: 1}
+  m_OverrideVector: {x: 1, y: 1, z: 0}
   m_DefaultArea: 1
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -7696,7 +7696,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 28b430b3b28bad4448b66096f83ef43e, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &763342095
 Transform:
   m_ObjectHideFlags: 0
