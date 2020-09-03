@@ -1,14 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Continue : MonoBehaviour
 {
+    public GameObject panel;
+    public GameObject score;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+    }
+
+    public void WinCondition()
+    {
+        panel.gameObject.SetActive(true);
+        score.SendMessage("Stop", true);
     }
 
     // Update is called once per frame
@@ -16,14 +23,24 @@ public class Continue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F2))
         {
-            var scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.buildIndex);
+            Reset();
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            var scene = SceneManager.GetActiveScene();
-            var indx = (scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
-            SceneManager.LoadScene(indx);
+            Next();
         }
+    }
+
+    public void Next()
+    {
+        var scene = SceneManager.GetActiveScene();
+        var indx = (scene.buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+        SceneManager.LoadScene(indx);
+    }
+
+    public void Reset()
+    {
+        var scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.buildIndex);
     }
 }

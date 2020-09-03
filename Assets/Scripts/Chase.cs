@@ -28,11 +28,9 @@ public class Chase : MonoBehaviour
         {
             stop = true;
             target.GetComponent<Navigate>().enabled = false;
-            Canvas canvas = FindObjectOfType<Canvas>();
-            var gameOver = canvas.transform.Find("Panel");
-            gameOver.gameObject.SetActive(true);
-            var score = canvas.transform.Find("Score");
-            score.SendMessage("Stop", true);
+
+            var win = FindObjectOfType<Continue>();
+            win.WinCondition();
         }
         agent.SetDestination(target.transform.position);
         Navigate.DebugDrawPath(agent.path.corners);

@@ -13,8 +13,9 @@ public class PixelPerfect : MonoBehaviour {
         //camera.orthographicSize = Screen.height / (float)(PPUScale * PPU) * 0.5f;
         var cinema = GetComponent<Camera>();
         if (cinema !=null)
-        { 
-            cinema.orthographicSize = Screen.height / (float)(PPUScale * PPU) * 0.5f;
+        {
+            //fix decimals clitch...
+            cinema.orthographicSize = (float)Math.Round(Screen.height / (float)(PPUScale * PPU) * 0.5f, 2);
         }
     }
 }

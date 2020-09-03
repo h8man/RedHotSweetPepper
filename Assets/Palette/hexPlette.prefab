@@ -40,7 +40,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922675811309179502}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 0.875, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 1
   m_CellSwizzle: 0
@@ -85,6 +85,42 @@ Tilemap:
   m_GameObject: {fileID: 7424568897232054210}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -1, y: 0, z: 0}
+    second:
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 1, y: 0, z: 0}
+    second:
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 2, y: 0, z: 0}
+    second:
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -1, y: 1, z: 0}
     second:
       m_TileIndex: 0
@@ -112,6 +148,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 2, y: 1, z: 0}
+    second:
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -120,6 +165,16 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 186115f09da25c740b7f522ee38c6199, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 930a0c22bbf565547a19c329af399e00, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 10866f5258d880d42b4fe7103652e101, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 970d0be3e3a8e894da4ad374eec312a0, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 658e8a4a1255c30419d9e73a95845dc7, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: aff359ea18a7aae48b83335589fdf44b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4fe09ea741318864ebc65331875b4b01, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0eacdbf67ad5a144ba93d7e6082f66a2, type: 3}
@@ -127,8 +182,21 @@ Tilemap:
     m_Data: {fileID: 21300002, guid: 0eacdbf67ad5a144ba93d7e6082f66a2, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300004, guid: 0eacdbf67ad5a144ba93d7e6082f66a2, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 667508470178367385, guid: 0eacdbf67ad5a144ba93d7e6082f66a2, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8456608870303236473, guid: 0eacdbf67ad5a144ba93d7e6082f66a2,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 5950718704394649256, guid: 0eacdbf67ad5a144ba93d7e6082f66a2,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -81971390186240674, guid: 0eacdbf67ad5a144ba93d7e6082f66a2, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -214064047232388008, guid: 0eacdbf67ad5a144ba93d7e6082f66a2,
+      type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 8
     m_Data:
       e00: 1
       e01: 0
@@ -147,12 +215,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 3
+  - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: 0, z: 0}
-  m_Size: {x: 3, y: 2, z: 1}
+  m_Size: {x: 4, y: 2, z: 1}
   m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -197,6 +265,7 @@ TilemapRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
