@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+//***********************************************************************************
+// Contributed by author @Lazy_Sloth from unity forum (https://forum.unity.com/)
+//***********************************************************************************
+
 public class RotateInstantly : MonoBehaviour
 {
     private NavMeshAgent agent;

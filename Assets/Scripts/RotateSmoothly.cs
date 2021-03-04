@@ -2,6 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
+//***********************************************************************************
+// Contributed by author @Lazy_Sloth from unity forum (https://forum.unity.com/)
+//***********************************************************************************
+
 public class RotateSmoothly : MonoBehaviour
 {
     private NavMeshAgent agent;
