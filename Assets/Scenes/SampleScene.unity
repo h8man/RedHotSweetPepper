@@ -5505,6 +5505,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agent
       objectReference: {fileID: 0}
+    - target: {fileID: 5094546156008475561, guid: e0a8643b0642e3049988c3e04b2b87f3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5094546156008475542, guid: e0a8643b0642e3049988c3e04b2b87f3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5766,6 +5771,21 @@ PrefabInstance:
     - target: {fileID: 7555888791966575818, guid: c19e7683369f52849b395bb33e139d5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638603988777406075, guid: c19e7683369f52849b395bb33e139d5e,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638603988777406075, guid: c19e7683369f52849b395bb33e139d5e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638603988777406075, guid: c19e7683369f52849b395bb33e139d5e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

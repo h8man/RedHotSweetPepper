@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class Chase : MonoBehaviour
@@ -8,6 +6,8 @@ public class Chase : MonoBehaviour
     public GameObject target;
     private NavMeshAgent agent;
     private bool stop;
+    public bool showPath;
+    public bool showAhead;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +33,10 @@ public class Chase : MonoBehaviour
             win.WinCondition();
         }
         agent.SetDestination(target.transform.position);
-        Navigate.DebugDrawPath(agent.path.corners);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Navigate.DrawGizmos(agent, showPath, showAhead);
     }
 }
