@@ -91,6 +91,10 @@ namespace UnityEngine.AI
         bool m_BuildHeightMesh;
         public bool buildHeightMesh { get { return m_BuildHeightMesh; } set { m_BuildHeightMesh = value; } }
 
+        [SerializeField]
+        bool m_HideEditorLogs;
+        public bool hideEditorLogs { get { return m_HideEditorLogs; } set { m_HideEditorLogs = value; } }
+
         // Reference to whole scene navmesh data asset.
         [UnityEngine.Serialization.FormerlySerializedAs("m_BakedNavMeshData")]
         [SerializeField]
@@ -157,7 +161,7 @@ namespace UnityEngine.AI
             var buildSettings = NavMesh.GetSettingsByID(m_AgentTypeID);
             if (buildSettings.agentTypeID == -1)
             {
-                Debug.LogWarning("No build settings for agent type ID " + agentTypeID, this);
+                if (!m_HideEditorLogs) Debug.LogWarning("No build settings for agent type ID " + agentTypeID, this);
                 buildSettings.agentTypeID = m_AgentTypeID;
             }
 
@@ -197,6 +201,25 @@ namespace UnityEngine.AI
                 if (isActiveAndEnabled)
                     AddData();
             }
+        }
+
+        // Source: https://github.com/Unity-Technologies/NavMeshComponents/issues/97#issuecomment-528692289
+        public AsyncOperation BuildNavMeshAsync()
+        {
+            RemoveData();
+            m_NavMeshData = new NavMeshData(m_AgentTypeID)
+            {
+                name = gameObject.name,
+                position = transform.position,
+                rotation = transform.rotation
+            };
+
+            if (isActiveAndEnabled)
+            {
+                AddData();
+            }
+
+            return UpdateNavMesh(m_NavMeshData);
         }
 
         public AsyncOperation UpdateNavMesh(NavMeshData data)
@@ -338,6 +361,8 @@ namespace UnityEngine.AI
                     UnityEditor.AI.NavMeshBuilder.CollectSourcesInStage(
                         worldBounds, m_LayerMask, m_UseGeometry, m_DefaultArea, markups, gameObject.scene, sources);
                 }
+                if (!hideEditorLogs && !Mathf.Approximately(transform.eulerAngles.x, 270f))
+                    Debug.LogWarning("NavMeshSurface2d is not rotated respectively to (x-90;y0;z0). Apply rotation unless intended.");
                 var builder = new NavMeshBuilder2dWrapper();
                 builder.defaultArea = defaultArea;
                 builder.layerMask = layerMask;
@@ -349,6 +374,7 @@ namespace UnityEngine.AI
                 builder.CollectGeometry = useGeometry;
                 builder.CollectObjects = collectObjects;
                 builder.parent = gameObject;
+                builder.hideEditorLogs = hideEditorLogs;
                 NavMeshBuilder2d.CollectSources(sources, builder);
 
             }
@@ -369,6 +395,8 @@ namespace UnityEngine.AI
                     var worldBounds = GetWorldBounds(localToWorld, new Bounds(m_Center, m_Size));
                     NavMeshBuilder.CollectSources(worldBounds, m_LayerMask, m_UseGeometry, m_DefaultArea, markups, sources);
                 }
+                if (!hideEditorLogs && !Mathf.Approximately(transform.eulerAngles.x, 270f))
+                    Debug.LogWarning("NavMeshSurface2d is not rotated respectively to (x-90;y0;z0). Apply rotation unless intended.");
                 var builder = new NavMeshBuilder2dWrapper();
                 builder.defaultArea = defaultArea;
                 builder.layerMask = layerMask;
@@ -380,7 +408,8 @@ namespace UnityEngine.AI
                 builder.CollectGeometry = useGeometry;
                 builder.CollectObjects = collectObjects;
                 builder.parent = gameObject;
-                NavMeshBuilder2d.CollectSources(sources,builder);
+                builder.hideEditorLogs = hideEditorLogs;
+                NavMeshBuilder2d.CollectSources(sources, builder);
             }
             if (m_IgnoreNavMeshAgent)
                 sources.RemoveAll((x) => (x.component != null && x.component.gameObject.GetComponent<NavMeshAgent>() != null));
@@ -520,7 +549,7 @@ namespace UnityEngine.AI
         {
             if (UnshareNavMeshAsset())
             {
-                Debug.LogWarning("Duplicating NavMeshSurface does not duplicate the referenced navmesh data", this);
+                if (!m_HideEditorLogs) Debug.LogWarning("Duplicating NavMeshSurface does not duplicate the referenced navmesh data", this);
                 m_NavMeshData = null;
             }
 

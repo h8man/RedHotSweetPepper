@@ -31,6 +31,8 @@ namespace UnityEditor.AI
         SerializedProperty m_UseGeometry;
         SerializedProperty m_VoxelSize;
 
+        SerializedProperty m_HideEditorLogs;
+
 #if NAVMESHCOMPONENTS_SHOW_NAVMESHDATA_REF
         SerializedProperty m_NavMeshData;
 #endif
@@ -82,6 +84,8 @@ namespace UnityEditor.AI
             m_TileSize = serializedObject.FindProperty("m_TileSize");
             m_UseGeometry = serializedObject.FindProperty("m_UseGeometry");
             m_VoxelSize = serializedObject.FindProperty("m_VoxelSize");
+
+            m_HideEditorLogs = serializedObject.FindProperty("m_HideEditorLogs");
 
 #if NAVMESHCOMPONENTS_SHOW_NAVMESHDATA_REF
             m_NavMeshData = serializedObject.FindProperty("m_NavMeshData");
@@ -214,6 +218,11 @@ namespace UnityEditor.AI
 
             EditorGUILayout.Space();
 
+            // Hide editor logs
+            EditorGUILayout.PropertyField(m_HideEditorLogs);
+
+            EditorGUILayout.Space();
+
             serializedObject.ApplyModifiedProperties();
 
             var hadError = false;
@@ -292,6 +301,13 @@ namespace UnityEditor.AI
                     }
                 }
                 GUILayout.EndHorizontal();
+                foreach (NavMeshSurface2d navSurface in targets)
+                {
+                    if (!Mathf.Approximately(navSurface.transform.eulerAngles.x, 270f))
+                    {
+                        EditorGUILayout.HelpBox("NavMeshSurface2d is not rotated respectively to (x-90;y0;z0). Apply rotation unless intended.", MessageType.Warning);
+                    }
+                }
             }
 
             // Show progress for the selected targets
