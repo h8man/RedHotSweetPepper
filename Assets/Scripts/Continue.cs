@@ -1,11 +1,13 @@
 ﻿using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Continue : MonoBehaviour
 {
     public GameObject panel;
     public GameObject score;
+    public UnityEvent winConditionFire;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +18,7 @@ public class Continue : MonoBehaviour
     {
         panel.gameObject.SetActive(true);
         score.SendMessage("Stop", true);
+        winConditionFire?.Invoke();
     }
 
     // Update is called once per frame

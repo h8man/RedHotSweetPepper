@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleSceneNoTileMap.unity
     guid: 3d5a83a03ebfcbd45bc258409f297f5e
+  - enabled: 1
+    path: Assets/Scenes/SampleSceneRuntime.unity
+    guid: de86a38ac98734846b15e20dbcac0741
   m_configObjects: {}
