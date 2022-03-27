@@ -3612,7 +3612,7 @@ GameObject:
   - component: {fileID: 2122262946}
   - component: {fileID: 2122262944}
   m_Layer: 0
-  m_Name: NavNesh
+  m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3678,7 +3678,7 @@ MonoBehaviour:
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: fe2f1da8047238842a2e18c7a85e899c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 062c3ac97de87c54cab5139072873f25, type: 2}
 --- !u!1001 &2401932978163712917
 PrefabInstance:
   m_ObjectHideFlags: 0

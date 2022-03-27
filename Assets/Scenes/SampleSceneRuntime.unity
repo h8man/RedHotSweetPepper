@@ -6314,7 +6314,7 @@ GameObject:
   - component: {fileID: 2122262947}
   - component: {fileID: 2122262948}
   m_Layer: 0
-  m_Name: NavNesh
+  m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
