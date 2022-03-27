@@ -35,7 +35,12 @@ namespace NavMeshComponents.Extensions
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(m_OverrideByGrid);
-            EditorGUILayout.PropertyField(m_UseMeshPrefab);
+            using (new EditorGUI.DisabledScope(!m_OverrideByGrid.boolValue))
+            {
+                EditorGUI.indentLevel++;
+                EditorGUILayout.PropertyField(m_UseMeshPrefab);
+                EditorGUI.indentLevel--;
+            }
             EditorGUILayout.PropertyField(m_CompressBounds);
             EditorGUILayout.PropertyField(m_OverrideVector);
 
