@@ -7,6 +7,7 @@ namespace NavMeshComponents.Extensions
 {
     public abstract class NevMeshExtension: MonoBehaviour
     {
+        public int Order { get; protected set; }
         public virtual void CollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState) { }
         public virtual void CalculateWorldBounds(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState) { }
 
@@ -47,9 +48,9 @@ namespace NavMeshComponents.Extensions
             if (NavMeshSurfaceOwner != null)
             {
                 if (connect)
-                    NavMeshSurfaceOwner.AddExtension(this);
+                    NavMeshSurfaceOwner.NevMeshExtensions.Add(this, Order);
                 else
-                    NavMeshSurfaceOwner.RemoveExtension(this);
+                    NavMeshSurfaceOwner.NevMeshExtensions.Remove(this);
             }
             mExtraState = null;
         }

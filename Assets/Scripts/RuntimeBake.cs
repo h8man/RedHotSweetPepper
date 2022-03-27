@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     class RuntimeBake: MonoBehaviour
     {
-        public NavMeshSurface2d Surface2D;
+        public NavMeshSurface Surface2D;
 
         void Start()
         {
