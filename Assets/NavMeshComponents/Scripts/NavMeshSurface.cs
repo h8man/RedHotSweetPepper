@@ -345,10 +345,10 @@ namespace UnityEngine.AI
                     UnityEditor.AI.NavMeshBuilder.CollectSourcesInStage(
                         worldBounds, m_LayerMask, m_UseGeometry, m_DefaultArea, markups, gameObject.scene, sources);
                 }
-
+                var buildState = new NavMeshBuilderState();
                 for (int i = 0; i < NevMeshExtensions.Count; ++i)
                 {
-                    NevMeshExtensions[i].CollectSources(this, sources, new NavMeshBuilderState());
+                    NevMeshExtensions[i].CollectSources(this, sources, buildState);
                 }
             }
             else
@@ -407,10 +407,10 @@ namespace UnityEngine.AI
             worldToLocal = worldToLocal.inverse;
 
             var result = new Bounds();
+            var builderState = new NavMeshBuilderState() { result = result, worldToLocal = worldToLocal };
             for (int i = 0; i < NevMeshExtensions.Count; ++i)
             {
-                var builderState = new NavMeshBuilderState() { result = result, worldToLocal = worldToLocal };
-                NevMeshExtensions[i].CollectSources(this, sources, builderState);
+                NevMeshExtensions[i].CalculateWorldBounds(this, sources, builderState);
                 result.Encapsulate(builderState.result);
             }
             foreach (var src in sources)

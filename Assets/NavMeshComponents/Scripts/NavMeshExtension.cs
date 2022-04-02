@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 namespace NavMeshComponents.Extensions
 {
-    public abstract class NevMeshExtension: MonoBehaviour
+    public abstract class NavMeshExtension: MonoBehaviour
     {
         public int Order { get; protected set; }
         public virtual void CollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState) { }
@@ -31,7 +31,7 @@ namespace NavMeshComponents.Extensions
         static void OnScriptReload()
         {
             var extensions = Resources.FindObjectsOfTypeAll(
-                typeof(NevMeshExtension)) as NevMeshExtension[];
+                typeof(NavMeshExtension)) as NavMeshExtension[];
             foreach (var e in extensions)
                 e.ConnectToVcam(true);
         }

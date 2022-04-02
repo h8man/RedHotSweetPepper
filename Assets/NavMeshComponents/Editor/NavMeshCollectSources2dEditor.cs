@@ -26,12 +26,6 @@ namespace NavMeshComponents.Extensions
     
             var surf = target as NavMeshCollectSources2d;
 
-            if (surf?.NavMeshSurfaceOwner.collectObjects != CollectObjects.Children
-                && GameObject.FindObjectOfType<Grid>() == null)
-            {
-                EditorGUILayout.HelpBox($"{CollectObjects.All} or {CollectObjects.Volume} is not intended to be used without root Grid object in scene. Use {CollectObjects.Children} instead.", MessageType.Warning);
-            }
-
             EditorGUILayout.Space();
 
             EditorGUILayout.PropertyField(m_OverrideByGrid);

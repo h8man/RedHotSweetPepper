@@ -11,7 +11,7 @@ namespace NavMeshComponents.Extensions
 {
     [ExecuteAlways]
     [AddComponentMenu("Navigation/NavMeshCollectSources2d", 30)]
-    public class NavMeshCollectSources2d: NevMeshExtension
+    public class NavMeshCollectSources2d: NavMeshExtension
     {
         [SerializeField]
         bool m_OverrideByGrid;
@@ -54,6 +54,7 @@ namespace NavMeshComponents.Extensions
             }
             return bounds;
         }
+
         public override void CollectSources(NavMeshSurface surface, List<NavMeshBuildSource> sources, NavMeshBuilderState navNeshState)
         {
             if (!surface.hideEditorLogs && !Mathf.Approximately(transform.eulerAngles.x, 270f))
@@ -70,6 +71,7 @@ namespace NavMeshComponents.Extensions
             builder.CollectObjects = (CollectObjects2d)(int)surface.collectObjects;
             builder.parent = surface.gameObject;
             builder.hideEditorLogs = surface.hideEditorLogs;
+            builder.SetRoot(navNeshState.roots);
             NavMeshBuilder2d.CollectSources(sources, builder);
         }
     }
