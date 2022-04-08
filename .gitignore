@@ -37,3 +37,4 @@ sysinfo.txt
 *.unitypackage
 /Assets/TextMesh Pro
 /Logs
+/UserSettings

@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class NavMeshObstacle2d : MonoBehaviour
 {
     // Start is called before the first frame update
-    public NavMeshSurface2d surface;
+    public NavMeshSurface surface;
 
     void Start()
     {

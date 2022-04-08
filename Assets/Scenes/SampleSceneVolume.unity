@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: c46c250d003b9fb44b29835219b5723f,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 678fc69b067d8ee4c9ac487faee50851,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -5523,9 +5523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_CollectObjects: 1
+  m_Size: {x: 14, y: 10, z: 9}
+  m_Center: {x: 0, y: 2, z: 0.5}
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5539,7 +5539,7 @@ MonoBehaviour:
   m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: ebd316de7ac1bc84aa868e335ffc0867, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 01d5f0a5ad22ed44b8cf26436b09bf6c, type: 2}
 --- !u!1001 &5094546157070875830
 PrefabInstance:
   m_ObjectHideFlags: 0
