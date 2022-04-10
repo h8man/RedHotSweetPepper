@@ -6310,6 +6310,7 @@ GameObject:
   - component: {fileID: 2122262945}
   - component: {fileID: 2122262944}
   - component: {fileID: 2122262949}
+  - component: {fileID: 2122262950}
   - component: {fileID: 2122262946}
   - component: {fileID: 2122262947}
   - component: {fileID: 2122262948}
@@ -6333,7 +6334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
-  m_CollectObjects: 0
+  m_CollectObjects: 2
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
@@ -6419,6 +6420,20 @@ MonoBehaviour:
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
   m_OverrideVector: {x: 1, y: 1, z: 1}
+--- !u!114 &2122262950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122262943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 695db3ceec6a8b249a8753d16816b3c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rootSources:
+  - {fileID: 633295743}
 --- !u!1001 &5094546157070875830
 PrefabInstance:
   m_ObjectHideFlags: 0
