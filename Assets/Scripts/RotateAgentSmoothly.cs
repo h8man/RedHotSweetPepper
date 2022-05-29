@@ -6,7 +6,7 @@ using UnityEngine.AI;
 // Contributed by author @Lazy_Sloth from unity forum (https://forum.unity.com/)
 //***********************************************************************************
 
-public class RotateSmoothly : MonoBehaviour
+public class RotateAgentSmoothly : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Vector2 nextWaypoint;

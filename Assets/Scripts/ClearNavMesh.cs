@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AI;
 
 class ClearNavMesh: MonoBehaviour
 {
     [SerializeField]
-    private NavMeshObstacle2d navMeshObstacle;
+    private NavMeshSurface navMesh;
 
-    public NavMeshObstacle2d NevMeshObstacle { get => navMeshObstacle; set => navMeshObstacle = value; }
 
     public void Clear()
     {
-        navMeshObstacle.enabled = false;
-        navMeshObstacle?.surface.RemoveData();
+        navMesh.RemoveData();
     }
 }

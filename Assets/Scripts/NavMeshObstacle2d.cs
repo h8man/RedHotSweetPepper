@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using NavMeshComponents.Extensions;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine.AI;
 public class NavMeshObstacle2d : MonoBehaviour
 {
     // Start is called before the first frame update
-    public NavMeshSurface surface;
+    public NavMeshCacheSources2d cacheSources2D;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class NavMeshObstacle2d : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        surface.UpdateNavMesh(surface.navMeshData);
+    {
+        cacheSources2D.UpdateSource(gameObject);
     }
 }
