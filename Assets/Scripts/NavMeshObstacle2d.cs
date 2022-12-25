@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class NavMeshObstacle2d : MonoBehaviour
 {
     // Start is called before the first frame update
-    public NavMeshCacheSources2d cacheSources2D;
+    public CollectSourcesCache2d cacheSources2D;
 
     void Start()
     {

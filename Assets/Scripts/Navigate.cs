@@ -13,8 +13,6 @@ public class Navigate : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
     }
 
     // Update is called once per frame

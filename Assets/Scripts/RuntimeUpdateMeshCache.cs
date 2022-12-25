@@ -6,7 +6,7 @@ namespace Assets.Scripts
 {
     class RuntimeUpdateMeshCache: MonoBehaviour
     {
-        public NavMeshCacheSources2d cacheSources2D;
+        public CollectSourcesCache2d cacheSources2D;
 
         private void Update()
         {
