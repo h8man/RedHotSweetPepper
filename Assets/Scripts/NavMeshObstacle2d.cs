@@ -1,4 +1,4 @@
-﻿using NavMeshComponents.Extensions;
+﻿using NavMeshPlus.Extensions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
