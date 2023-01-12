@@ -82,7 +82,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5094546156008475561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9987ec0ffc2f70b44a08b55fff393a63, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e39f6090724e4a4a8aadeb042afa2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &7923227251114043615
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5094546156008475561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e6c3e2b30290e4c881efe1ae6c1afd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c7f4db162bab4443818dd13bed4b1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 25.6
