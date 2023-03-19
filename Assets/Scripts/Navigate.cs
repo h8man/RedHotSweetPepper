@@ -43,7 +43,7 @@ public class Navigate : MonoBehaviour
 
     public static void DrawGizmos(NavMeshAgent agent, bool showPath, bool showAhead)
     {
-        if (Application.isPlaying)
+        if (Application.isPlaying && agent != null)
         {
             if (showPath && agent.hasPath)
             {

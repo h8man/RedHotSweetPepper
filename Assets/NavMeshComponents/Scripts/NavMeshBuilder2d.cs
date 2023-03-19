@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 namespace NavMeshPlus.Extensions
 {
-    class NavMeshBuilder2dState
+    class NavMeshBuilder2dState: IDisposable
     {
         public Dictionary<Sprite, Mesh> map;
         public Dictionary<uint, Mesh> coliderMap;
@@ -27,6 +27,8 @@ namespace NavMeshPlus.Extensions
         public bool hideEditorLogs;
         
         protected IEnumerable<GameObject> _root;
+        private bool _disposed;
+
         public IEnumerable<GameObject> Root => _root ?? GetRoot();
 
         public NavMeshBuilder2dState()
@@ -80,19 +82,56 @@ namespace NavMeshPlus.Extensions
             switch (CollectObjects)
             {
                 case CollectObjects.Children: return new[] { parent };
-                case CollectObjects.Volume: 
+                case CollectObjects.Volume:
                 case CollectObjects.All:
                 default:
-                {
-                    var list = new List<GameObject>();
-                    for (int i = 0; i < SceneManager.sceneCount; ++i)
                     {
-                        var s = SceneManager.GetSceneAt(i);
-                        s.GetRootGameObjects(list);
+                        var list = new List<GameObject>();
+                        var roots = new List<GameObject>();
+                        for (int i = 0; i < SceneManager.sceneCount; ++i)
+                        {
+                            var s = SceneManager.GetSceneAt(i);
+                            if (!s.isLoaded) continue;
+                            s.GetRootGameObjects(list);
+                            roots.AddRange(list);
+                        }
+                        return roots;
                     }
-                    return list;
+            }
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+
+            if (disposing)
+            {
+                // TODO: dispose managed state (managed objects).
+                foreach (var item in map)
+                {
+                    Object.Destroy(item.Value);
+                }
+                foreach (var item in coliderMap)
+                {
+                    Object.Destroy(item.Value);
                 }
             }
+
+            // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
+            // TODO: set large fields to null.
+
+            _disposed = true;
+        }
+
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
         }
     }
 
