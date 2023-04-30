@@ -114,7 +114,7 @@ namespace NavMeshPlus.Extensions
                 {
 #if UNITY_EDITOR
                     Object.DestroyImmediate(item.Value);
-#else              
+#else 
                     Object.Destroy(item.Value);
 #endif
                 }
@@ -126,6 +126,8 @@ namespace NavMeshPlus.Extensions
                     Object.Destroy(item.Value);
 #endif
                 }
+                spriteMeshMap.Clear();
+                coliderMeshMap.Clear();
             }
 
             // TODO: free unmanaged resources (unmanaged objects) and override a finalizer below.
@@ -228,7 +230,7 @@ namespace NavMeshPlus.Extensions
 
         public static void CollectSources(List<NavMeshBuildSource> sources, SpriteRenderer spriteRenderer, int area, NavMeshBuilder2dState builder)
         {
-            if (spriteRenderer == null)
+            if (spriteRenderer == null || spriteRenderer.sprite == null)
             {
                 return;
             }
